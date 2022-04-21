@@ -1,0 +1,12 @@
+from tkinter import *
+main = Tk()
+main.title(string='Caixa Eletrônico')
+main.geometry('250x120')
+#main.resizable(False, False)
+main.grid()
+textrs = Label(main, text="R$ ").grid(column=1, row=1)
+url = Entry(main, text='').grid(column=2, row=1)
+sacar = Button(main, text="   Sacar   ").grid(column=2, row=2)
+espaco = Label(main, text="").grid(column=0, row=0)
+sair = Button(main, text="  Sair  ", command=main.destroy).grid(column=2, row=4)
+main.mainloop()
