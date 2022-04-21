@@ -19,4 +19,5 @@ while True:
 print(f'Total da compra e R$ {soma:.2f}')
 print(f'Temos {pmaior} produtos valendo + 1.000,00')
 print(f'O nome do produto mais barato é {barato} e custa: R${menor:.2f}')
+print('Acabou')
 
