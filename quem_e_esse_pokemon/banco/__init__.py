@@ -8,16 +8,22 @@ conexao = connect(
     database='mundo_pokemon'
 )
 
-# query
+# Query
 sql = f'''select * from base_pokemons
+where P_LETRA = '{letra}' and
+TYPE_1 = '{tipo}' and
+GERACAO = '{geracao}' and
+EST_EVOL = '{evo}' and
+LENDARIO = '{lend}';
 '''
 
 cursor = conexao.cursor()
 cursor.execute(sql)
 
-# resultado da query
-achei = cursor.fetchall()
+# Resultado da query
+pokemon = cursor.fetchall()[0]
 
 conexao.close()
 
-print(achei)
+print(pokemon)
+
